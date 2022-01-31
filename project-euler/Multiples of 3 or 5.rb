@@ -6,7 +6,7 @@ The sum of these multiples is 23.
 =end
 
 #Solution1
-input = (1..10-1)
+input = (1..1000-1)
 sum = 0
 
 input.each do |n|
