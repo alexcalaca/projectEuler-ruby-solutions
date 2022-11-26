@@ -14,10 +14,13 @@ sum = 0
 while quantity < 5
   puts "Round number: #{quantity + 1}"
   puts " #{f0} #{f1}"
-  sum = sum + f0 + f1
+
+  sum += f0 if f0.even?
+  sum += f1 if f1%2 == 0
+
   f0 += f1
   f1 = f0 + f1
   quantity += 1
 end
 
-puts "The sum of the first 10 elements is #{sum}"
+puts "Considering the first 10 elements of the Fibonacci sequence, the sum of even-valued elements is #{sum}"
