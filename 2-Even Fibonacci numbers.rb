@@ -11,19 +11,16 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 f0 = 0
 f1 = 1
-quantity = 0
 sum = 0
 
-while f1 < 4e6
-  puts "Round number: #{quantity + 1}"
-  puts " #{f0} #{f1}"
+while f1 < 4e6  
+  print "#{f0} #{f1}"
 
   sum += f0 if f0.even?
   sum += f1 if f1%2 == 0
 
   f0 += f1
-  f1 = f0 + f1
-  quantity += 1
+  f1 = f0 + f1  
 end
 
-puts "The Sum of all even-valued terms in Fibonacci sequence whose values do not exceed four million is #{sum}"
+puts "\nThe Sum of all even-valued terms in Fibonacci sequence whose values do not exceed four million is #{sum}"
