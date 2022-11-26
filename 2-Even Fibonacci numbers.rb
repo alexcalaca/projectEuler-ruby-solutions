@@ -9,11 +9,15 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 f0 = 0
 f1 = 1
 quantity = 0
+sum = 0
 
-while quantity < 10
+while quantity < 5
   puts "Round number: #{quantity + 1}"
   puts " #{f0} #{f1}"
+  sum = sum + f0 + f1
   f0 += f1
   f1 = f0 + f1
   quantity += 1
 end
+
+puts "The sum of the first 10 elements is #{sum}"
